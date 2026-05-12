@@ -7,7 +7,7 @@ import CircuitCanvas from "@/components/CircuitCanvas";
 import BlochSphere from "@/components/BlochSphere";
 import { CircuitData, GateType } from "@/types/quantum";
 
-const API_URL = "http://localhost:8000";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
 export default function Workspace() {
   const [activeTab, setActiveTab] = useState("results");
